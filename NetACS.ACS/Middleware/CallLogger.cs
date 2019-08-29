@@ -52,14 +52,7 @@ namespace NetACS.Server.Middleware
 
             request.Body = body;
 
-            string headers = "";
-
-            foreach(var header in request.Headers)
-            {
-                headers += $"Key: {header.Key}, Value: {header.Value};";
-            }
-
-            return $"{request.Scheme} {request.Host}{request.Path} {bodyAsText} {headers}";
+            return $"{request.Scheme} {request.Host}{request.Path} {request.QueryString} {bodyAsText}";
         }
 
         private async Task<string> FormatResponse(HttpResponse response)

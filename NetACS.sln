@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29009.5
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetACS.Server", "NetACS.Server\NetACS.Server.csproj", "{7CD594CF-7AD5-4A4C-A1C4-646FED09C4BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetACS.Server", "NetACS.Server\NetACS.Server.csproj", "{7CD594CF-7AD5-4A4C-A1C4-646FED09C4BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetACS.API", "NetACS.API\NetACS.API.csproj", "{C2491B05-82FC-4E29-A27A-943C33AE92C3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetACS.API", "NetACS.API\NetACS.API.csproj", "{C2491B05-82FC-4E29-A27A-943C33AE92C3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

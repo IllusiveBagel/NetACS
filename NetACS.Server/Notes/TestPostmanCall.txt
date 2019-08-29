@@ -1,0 +1,27 @@
+﻿POST /CalculatorService.svc HTTP/1.1
+Host: localhost:5000
+Content-Type: text/xml
+cache-control: no-cache
+Postman-Token: 8ce94816-426b-49a8-ad84-5167e42207c6
+
+<?xml version="1.0" encoding="UTF-8"?>
+<soap-env:Envelope 
+	xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/" 
+	xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:cwmp="urn:dslforum-org:cwmp-1-0">
+  <soap-env:Header>
+    <cwmp:ID soap-env:mustUnderstand="1">hx4lhidg</cwmp:ID>
+  </soap-env:Header>
+  <soap-env:Body>
+  	<cwmp:Inform>
+  		<DeviceId>
+        <Manufacturer>Huawei Technologies Co., Ltd.</Manufacturer>
+        <OUI>202BC1</OUI>
+        <ProductClass>BM632w</ProductClass>
+        <SerialNumber>000001</SerialNumber>
+      </DeviceId>
+  	</cwmp:Inform>
+  </soap-env:Body>
+</soap-env:Envelope>
