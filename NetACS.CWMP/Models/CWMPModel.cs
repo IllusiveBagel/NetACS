@@ -1,23 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Serialization;
-using System.Threading.Tasks;
+﻿using System.Runtime.Serialization;
 
 namespace NetACS.CWMP.Models
 {
     [DataContract]
-    public class CWMPModel
+    public class Inform
     {
-        [DataMember]
+        [DataMember(Order = 0)]
         public DeviceId DeviceId { get; set; }
 
-        [DataMember]
+        [DataMember(Order = 1)]
         public string CurrentTime { get; set; }
     }
 
+    [DataContract]
     public class DeviceId
     {
+        [DataMember]
         public string Manufacturer { get; set; }
     }
 }

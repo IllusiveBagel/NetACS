@@ -1,10 +1,5 @@
 ﻿using NetACS.CWMP.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.ServiceModel;
-using System.Threading.Tasks;
-using System.Xml.Linq;
 
 namespace NetACS.CWMP.Interfaces
 {
@@ -12,8 +7,6 @@ namespace NetACS.CWMP.Interfaces
     public interface ICWMPService
     {
         [OperationContract]
-        CWMPModel Inform(CWMPModel model);
-
-        void XmlMethod(XElement xml);
+        Inform Inform(Inform model);
     }
 }
