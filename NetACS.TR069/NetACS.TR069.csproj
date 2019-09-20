@@ -2,10 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
-    <UserSecretsId>bf196158-0b7e-4d59-b89f-55c9e49266d5</UserSecretsId>
+    <UserSecretsId>ef47c3a3-df2f-40a7-8053-5b741591c120</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
-    <Authors>George Deeley</Authors>
-    <Company>Neutral Systems</Company>
   </PropertyGroup>
 
   <ItemGroup>
@@ -15,8 +13,11 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
-    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.9.2" />
-    <PackageReference Include="SoapCore" Version="0.9.9.8-beta" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.9.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NetACS.SoapMiddleware\NetACS.SoapMiddleware.csproj" />
   </ItemGroup>
 
 </Project>

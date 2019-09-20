@@ -12,13 +12,24 @@ namespace NetACS.CWMP
 {
     public class Program
     {
+        //public static void Main(string[] args)
+        //{
+        //    CreateWebHostBuilder(args).Build().Run();
+        //}
+
+        //public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
+        //    WebHost.CreateDefaultBuilder(args)
+        //        .UseStartup<Startup>();
+
         public static void Main(string[] args)
         {
-            CreateWebHostBuilder(args).Build().Run();
-        }
+            var host = new WebHostBuilder()
+                .UseKestrel().UseUrls("http://*:5000")
+                .UseContentRoot(Directory.GetCurrentDirectory())
+                .UseStartup<Startup>()
+                .Build();
 
-        public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
-            WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>();
+            host.Run();
+        }
     }
 }

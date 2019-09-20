@@ -1,15 +1,16 @@
-﻿using System.Runtime.Serialization;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
+using System.Runtime.Serialization;
 
 namespace NetACS.CWMP.Models
 {
     [DataContract]
     public class Inform
     {
-        [DataMember(Order = 0)]
-        public DeviceId DeviceId { get; set; }
-
-        [DataMember(Order = 1)]
-        public string CurrentTime { get; set; }
+        //[DataMember(Order = 0, Name = "DeviceId")]
+        //public DeviceId DeviceId { get; set; }
+        [DataMember]
+        public int MaxEnvelopes { get; set; }
     }
 
     [DataContract]

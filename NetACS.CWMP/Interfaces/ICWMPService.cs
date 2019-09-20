@@ -7,6 +7,6 @@ namespace NetACS.CWMP.Interfaces
     public interface ICWMPService
     {
         [OperationContract]
-        Inform Inform(Inform model);
+        string Inform(DeviceId DeviceId);
     }
 }

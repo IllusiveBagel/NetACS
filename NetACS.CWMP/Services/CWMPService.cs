@@ -6,18 +6,21 @@ namespace NetACS.CWMP.Services
 {
     public class CWMPService : ICWMPService
     {
-        public Inform Inform(Inform model)
+        public string Inform(DeviceId DeviceId)
         {
-            if (model == null)
+            string result = "";
+            if (DeviceId == null)
             {
                 Console.WriteLine("Model Null");
+                result = "Model Null";
             }
             else
             {
-                Console.WriteLine(model.DeviceId.Manufacturer);
+                Console.WriteLine(DeviceId.Manufacturer);
+                result = "Not Null";
             }
 
-            return new Inform();
+            return result;
         }
     }
 }
