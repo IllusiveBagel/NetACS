@@ -1,14 +1,16 @@
-﻿using System.Runtime.Serialization;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.Serialization;
+using System.Threading.Tasks;
 
-namespace NetACS.CWMP.Models
+namespace NetACS.ACS.Models
 {
     [DataContract]
-    public class Inform
+    public class InformModel
     {
         [DataMember]
         public DeviceId DeviceId { get; set; }
-        //[DataMember]
-        //public int MaxEnvelopes { get; set; }
     }
 
     [DataContract]

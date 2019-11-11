@@ -1,4 +1,5 @@
-﻿using NetACS.CWMP.Interfaces;
+﻿using Microsoft.AspNetCore.Mvc;
+using NetACS.CWMP.Interfaces;
 using NetACS.CWMP.Models;
 using System;
 
@@ -6,21 +7,18 @@ namespace NetACS.CWMP.Services
 {
     public class CWMPService : ICWMPService
     {
-        public string Inform(DeviceId DeviceId)
+        public DeviceId Inform(DeviceId inform)
         {
-            string result = "";
-            if (DeviceId == null)
+            try
+            {
+                Console.WriteLine(inform.Manufacturer);
+            }
+            catch
             {
                 Console.WriteLine("Model Null");
-                result = "Model Null";
             }
-            else
-            {
-                Console.WriteLine(DeviceId.Manufacturer);
-                result = "Not Null";
-            }
-
-            return result;
+            
+            return inform;
         }
     }
 }

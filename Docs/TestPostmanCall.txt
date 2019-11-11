@@ -16,7 +16,7 @@ Postman-Token: 8ce94816-426b-49a8-ad84-5167e42207c6
   </soap-env:Header>
   <soap-env:Body>
   	<cwmp:Inform>
-  		<DeviceId>
+  	  <DeviceId>
         <Manufacturer>Huawei Technologies Co., Ltd.</Manufacturer>
         <OUI>202BC1</OUI>
         <ProductClass>BM632w</ProductClass>

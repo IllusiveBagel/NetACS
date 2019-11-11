@@ -1,9 +1,7 @@
 ﻿using System.ServiceModel;
 using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
-using Microsoft.Extensions.Logging;
 using NetACS.CWMP.Interfaces;
 using NetACS.CWMP.Services;
 using SoapCore;
@@ -16,13 +14,13 @@ namespace NetACS.CWMP
         {
             services.AddSoapCore();
             services.TryAddSingleton<ICWMPService, CWMPService>();
-            services.AddMvc();
+            services.AddSoapExceptionTransformer((ex) => ex.Message);
+            services.AddMvc(option => option.EnableEndpointRouting = false);
         }
 
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
+        public void Configure(IApplicationBuilder app)
         {
-            app.UseSoapEndpoint<ICWMPService>("/Service.asmx", new BasicHttpBinding(), SoapSerializer.DataContractSerializer);
-
+            app.UseSoapEndpoint<ICWMPService>("/Service.asmx", new BasicHttpBinding());
             app.UseMvc();
         }
     }
