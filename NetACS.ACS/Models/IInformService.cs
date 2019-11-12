@@ -10,6 +10,6 @@ namespace NetACS.ACS.Models
     public interface IInformService
     {
         [OperationContract]
-        InformModel Inform(InformModel inform);
+        Inform Inform(DeviceId DeviceId, Event[] Event);
     }
 }

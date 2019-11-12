@@ -13,7 +13,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{C122D873-3
 		Docs\TestPostmanCall.txt = Docs\TestPostmanCall.txt
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetACS.ACS", "NetACS.ACS\NetACS.ACS.csproj", "{C06E5E0F-C162-4DB8-9D45-C2570503B66D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetACS.ACS", "NetACS.ACS\NetACS.ACS.csproj", "{C06E5E0F-C162-4DB8-9D45-C2570503B66D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SoapCore", "SoapCore\SoapCore.csproj", "{DB84BB55-3BAD-4AF9-A439-A33935901AD4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{C06E5E0F-C162-4DB8-9D45-C2570503B66D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C06E5E0F-C162-4DB8-9D45-C2570503B66D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C06E5E0F-C162-4DB8-9D45-C2570503B66D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB84BB55-3BAD-4AF9-A439-A33935901AD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB84BB55-3BAD-4AF9-A439-A33935901AD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB84BB55-3BAD-4AF9-A439-A33935901AD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB84BB55-3BAD-4AF9-A439-A33935901AD4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

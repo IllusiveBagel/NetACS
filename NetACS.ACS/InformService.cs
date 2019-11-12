@@ -5,18 +5,22 @@ namespace NetACS.ACS
 {
     public class InformService : IInformService
     {
-        public InformModel Inform(InformModel inform)
+        public Inform Inform(DeviceId DeviceId, Event[] Event)
         {
             try
             {
-                Console.WriteLine(inform.DeviceId.Manufacturer);
+                Console.WriteLine(DeviceId.Manufacturer);
             }
-            catch
+            catch(Exception ex)
             {
-                Console.WriteLine("Model Null");
+                Console.WriteLine(ex);
             }
 
-            return inform;
+            return new Models.Inform()
+            { 
+                DeviceId = DeviceId,
+                Event = Event
+            };
         }
     }
 }
