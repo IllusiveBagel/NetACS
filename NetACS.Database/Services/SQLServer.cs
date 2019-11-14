@@ -8,17 +8,32 @@ namespace NetACS.Database.Services
 {
     public class SQLServer : IDatabase
     {
-        public T Insert<T>(T model)
+        public List<T> Select<T>()
         {
             throw new NotImplementedException();
         }
 
-        public T Select<T>(T model)
+        public List<T> Select<T>(T model)
         {
             throw new NotImplementedException();
         }
 
-        public T Update<T>(T model)
+        public List<T> Select<T>(int count)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<T> Select<T>(T model, int count)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool Insert<T>(List<T> model)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool Update<T>(List<T> model)
         {
             throw new NotImplementedException();
         }
