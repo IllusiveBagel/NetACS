@@ -9,7 +9,7 @@ namespace NetACS.ACS.Models
         public DeviceId DeviceId { get; set; }
 
         [DataMember]
-        public Event[] Event { get; set; }
+        public EventStruct[] Event { get; set; }
     }
 
     [DataContract]
@@ -17,12 +17,6 @@ namespace NetACS.ACS.Models
     {
         [DataMember]
         public string Manufacturer { get; set; }
-    }
-
-    [DataContract]
-    public class Event
-    {
-        public EventStruct EventStruct { get; set; }
     }
 
     [DataContract]

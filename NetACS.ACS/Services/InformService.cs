@@ -1,11 +1,13 @@
 ﻿using System;
-using NetACS.ACS.Models;
 
-namespace NetACS.ACS
+using NetACS.ACS.Models;
+using NetACS.ACS.Interfaces;
+
+namespace NetACS.ACS.Services
 {
     public class InformService : IInformService
     {
-        public Inform Inform(DeviceId DeviceId, Event[] Event)
+        public Inform Inform(DeviceId DeviceId, EventStruct[] Event)
         {
             try
             {
