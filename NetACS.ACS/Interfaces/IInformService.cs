@@ -1,7 +1,6 @@
 ﻿using System.ServiceModel;
-using System.Xml.Serialization;
 
-using NetACS.ACS.Models;
+using NetACS.Models;
 
 namespace NetACS.ACS.Interfaces
 {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-using NetACS.ACS.Models;
+using NetACS.Models;
 using NetACS.ACS.Interfaces;
 
 namespace NetACS.ACS.Services
@@ -18,7 +18,7 @@ namespace NetACS.ACS.Services
                 Console.WriteLine(ex);
             }
 
-            return new Models.Inform()
+            return new Inform()
             { 
                 DeviceId = DeviceId,
                 Event = Event,
