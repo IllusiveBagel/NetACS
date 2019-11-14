@@ -10,6 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\NetACS.Database\NetACS.Database.csproj" />
     <ProjectReference Include="..\NetACS.Models\NetACS.Models.csproj" />
   </ItemGroup>
 

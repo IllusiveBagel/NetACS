@@ -14,9 +14,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{C122D873-3
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetACS.ACS", "NetACS.ACS\NetACS.ACS.csproj", "{C06E5E0F-C162-4DB8-9D45-C2570503B66D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetACS.Database", "NetACS.Database\NetACS.Database.csproj", "{6AFD0A0A-15B7-4C59-8549-D4061773FD3F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetACS.Database", "NetACS.Database\NetACS.Database.csproj", "{6AFD0A0A-15B7-4C59-8549-D4061773FD3F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetACS.Models", "NetACS.Models\NetACS.Models.csproj", "{5CCE429F-B58E-4F16-B49D-59D49EF0B828}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetACS.Models", "NetACS.Models\NetACS.Models.csproj", "{5CCE429F-B58E-4F16-B49D-59D49EF0B828}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQL", "SQL", "{55333F81-BBBB-46B7-BABA-B7813EE71F49}"
+	ProjectSection(SolutionItems) = preProject
+		DeviceId.sql = DeviceId.sql
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
