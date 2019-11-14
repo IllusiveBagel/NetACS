@@ -8,6 +8,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{C122D873-39DA-4611-AF02-664976E29C0A}"
 	ProjectSection(SolutionItems) = preProject
 		Docs\ExamplePacket.txt = Docs\ExamplePacket.txt
+		SoapUIExampleBody.xml = SoapUIExampleBody.xml
 		Docs\TestPostmanCall.txt = Docs\TestPostmanCall.txt
 	EndProjectSection
 EndProject

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap-env:Envelope xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cwmp="urn:dslforum-org:cwmp-1-0">
+   <soap-env:Header>
+    <cwmp:ID soap-env:mustUnderstand="1">nd1uilcu</cwmp:ID>
+  </soap-env:Header>
+   <soap-env:Body>
+      <cwmp:Inform>
+         <cwmp:DeviceId>
+            <cwmp:Manufacturer>SagemCom</cwmp:Manufacturer>
+            <cwmp:OUI>ECBEDD</cwmp:OUI>
+            <cwmp:ProductClass>FAST5366</cwmp:ProductClass>
+            <cwmp:SerialNumber>N7192326C000018</cwmp:SerialNumber>
+         </cwmp:DeviceId>
+         <cwmp:Event soap-enc:arrayType="cwmp:EventStruct[1]">
+            <cwmp:EventStruct>
+               <cwmp:EventCode>2 PERIODIC</cwmp:EventCode>
+               <cwmp:CommandKey/>
+            </cwmp:EventStruct>
+         </cwmp:Event>
+         <cwmp:ParameterList soap-enc:arrayType="cwmp:ParameterValueStruct[1]">
+            <cwmp:ParameterValueStruct>
+               <cwmp:Name>InternetGatewayDevice.DeviceInfo.SpecVersion</cwmp:Name>
+               <cwmp:Value xsi:type="xsd:string">1.0</cwmp:Value>
+            </cwmp:ParameterValueStruct>
+         </cwmp:ParameterList>
+      </cwmp:Inform>
+   </soap-env:Body>
+</soap-env:Envelope>
