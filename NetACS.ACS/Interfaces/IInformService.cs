@@ -1,4 +1,5 @@
 ﻿using System.ServiceModel;
+using System.Xml.Serialization;
 
 using NetACS.ACS.Models;
 
@@ -8,6 +9,6 @@ namespace NetACS.ACS.Interfaces
     public interface IInformService
     {
         [OperationContract]
-        Inform Inform(DeviceId DeviceId, EventStruct[] Event);
+        Inform Inform(DeviceId DeviceId, EventStruct[] Event, ParameterValueStruct[] ParameterList);
     }
 }

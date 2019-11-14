@@ -1,4 +1,5 @@
 ﻿using System.Runtime.Serialization;
+using System.Xml.Serialization;
 
 namespace NetACS.ACS.Models
 {
@@ -10,6 +11,9 @@ namespace NetACS.ACS.Models
 
         [DataMember]
         public EventStruct[] Event { get; set; }
+
+        [DataMember]
+        public ParameterValueStruct[] ParameterList { get; set; }
     }
 
     [DataContract]
@@ -17,6 +21,15 @@ namespace NetACS.ACS.Models
     {
         [DataMember]
         public string Manufacturer { get; set; }
+
+        [DataMember]
+        public string OUI { get; set; }
+
+        [DataMember]
+        public string ProductClass { get; set; }
+
+        [DataMember]
+        public string SerialNumber { get; set; }
     }
 
     [DataContract]
@@ -24,5 +37,15 @@ namespace NetACS.ACS.Models
     {
         [DataMember]
         public string EventCode { get; set; }
+    }
+
+    [DataContract]
+    public class ParameterValueStruct
+    {
+        [DataMember]
+        public string Name { get; set; }
+
+        [DataMember]
+        public string Value { get; set; }
     }
 }

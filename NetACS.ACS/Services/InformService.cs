@@ -7,7 +7,7 @@ namespace NetACS.ACS.Services
 {
     public class InformService : IInformService
     {
-        public Inform Inform(DeviceId DeviceId, EventStruct[] Event)
+        public Inform Inform(DeviceId DeviceId, EventStruct[] Event, ParameterValueStruct[] ParameterList)
         {
             try
             {
@@ -21,7 +21,8 @@ namespace NetACS.ACS.Services
             return new Models.Inform()
             { 
                 DeviceId = DeviceId,
-                Event = Event
+                Event = Event,
+                ParameterList = ParameterList
             };
         }
     }
