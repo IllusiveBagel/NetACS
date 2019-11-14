@@ -4,10 +4,17 @@ using System.Text;
 
 using NetACS.Database.Interfaces;
 
+using Dapper;
+
 namespace NetACS.Database.Services
 {
     public class SQLServer : IDatabase
     {
+        public SQLServer()
+        {
+
+        }
+
         public List<T> Select<T>()
         {
             throw new NotImplementedException();
