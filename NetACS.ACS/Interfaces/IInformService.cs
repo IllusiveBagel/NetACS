@@ -1,5 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
 using System.ServiceModel;
+using System.Collections.Generic;
 
 using NetACS.Models;
 
@@ -10,11 +11,5 @@ namespace NetACS.ACS.Interfaces
     {
         [OperationContract]
         Inform Inform(DeviceId DeviceId, EventStruct[] Event, ParameterValueStruct[] ParameterList);
-
-        [OperationContract]
-        List<DeviceId> selectTest();
-
-        [OperationContract]
-        int insertTest(List<Device> device);
     }
 }

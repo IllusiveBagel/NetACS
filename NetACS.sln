@@ -9,7 +9,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{C122D873-3
 	ProjectSection(SolutionItems) = preProject
 		Docs\ExamplePacket.xml = Docs\ExamplePacket.xml
 		SoapUIExampleBody.xml = SoapUIExampleBody.xml
-		Docs\TestPostmanCall.txt = Docs\TestPostmanCall.txt
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetACS.ACS", "NetACS.ACS\NetACS.ACS.csproj", "{C06E5E0F-C162-4DB8-9D45-C2570503B66D}"

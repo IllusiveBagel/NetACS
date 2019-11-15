@@ -38,15 +38,5 @@ namespace NetACS.ACS.Services
                 ParameterList = ParameterList
             };
         }
-
-        public List<DeviceId> selectTest()
-        {
-            return _dataService.Select<DeviceId>();
-        }
-
-        public int insertTest(List<Device> device)
-        {
-            return _dataService.Insert<Device>(device);
-        }
     }
 }

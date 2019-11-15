@@ -29,19 +29,9 @@ namespace NetACS.Database.Services
             return Query<T>($"SELECT * FROM {typeof(T).Name};").AsList<T>();
         }
 
-        public List<T> Select<T>(T model)
-        {
-            throw new NotImplementedException();
-        }
-
         public List<T> Select<T>(int count)
         {
-            throw new NotImplementedException();
-        }
-
-        public List<T> Select<T>(T model, int count)
-        {
-            throw new NotImplementedException();
+            return Query<T>($"SELECT TOP({count}) FROM {typeof(T).Name};").AsList<T>();
         }
 
         // Insert Methods
@@ -84,41 +74,20 @@ namespace NetACS.Database.Services
         }
 
         // Update Methods
-        public int Update<T>(List<T> model)
+        public int Update<T>(Guid ID, T model)
         {
             List<string> properties = typeof(T).GetProperties().Select(property => property.Name).ToList();
             List<string> values = new List<string>();
 
-            for (int i = 0; i < model.Count; i++)
+            foreach (string property in properties)
             {
-                List<string> row = new List<string>();
-                foreach (string property in properties)
-                {
-                    row.Add($"'{typeof(T).GetProperty(property).GetValue(model[i]).ToString()}'");
-                }
-
-                values.Add(string.Join(",", row));
-            }
-
-            string data = "";
-
-            var last = values.Last();
-            foreach (string value in values)
-            {
-                if (value.Equals(last))
-                {
-                    data += $"({ value})";
-                }
-                else
-                {
-                    data += $"({value}),";
-                }
+                values.Add($"{property}='{typeof(T).GetProperty(property).GetValue(model).ToString()}'");
             }
 
             return Execute(
                 $"UPDATE {typeof(T).Name} " +
-                $"SET {string.Join(",", properties)}" +
-                $"WHERE ID=''"
+                $"SET {string.Join(",", values)}" +
+                $"WHERE ID='{ID}'"
             );
         }
 

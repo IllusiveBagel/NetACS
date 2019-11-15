@@ -8,15 +8,13 @@ namespace NetACS.Database.Interfaces
     {
         // Select Methods
         public List<T> Select<T>();
-        public List<T> Select<T>(T model);
         public List<T> Select<T>(int count);
-        public List<T> Select<T>(T model, int count);
 
         // Insert Methods
         public int Insert<T>(List<T> model);
 
         // Update Methods
-        public int Update<T>(List<T> model);
+        public int Update<T>(Guid ID, T model);
 
         // Universal Methods
         public void Initialize(string connectionString);
