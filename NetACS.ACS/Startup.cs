@@ -5,16 +5,29 @@ using Microsoft.Extensions.DependencyInjection;
 
 using NetACS.ACS.Services;
 using NetACS.ACS.Interfaces;
+using NetACS.Database.Services;
+using NetACS.Database.Interfaces;
 
 using SoapCore;
+using Microsoft.Extensions.Configuration;
 
 namespace NetACS.ACS
 {
     public class Startup
     {
+        public Startup(IConfiguration configuration)
+        {
+            Configuration = configuration;
+        }
+
+        public IConfiguration Configuration { get; }
+
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSingleton(Configuration);
             services.AddSingleton<IInformService, InformService>();
+            services.AddTransient<IDatabase, SQLServer>();
+            
             services.AddMvc(x => x.EnableEndpointRouting = false);
             services.AddSoapCore();
         }
