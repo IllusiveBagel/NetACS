@@ -10,6 +10,8 @@ namespace NetACS.Models
         // Used For Database Interaction Only
         public Guid ID { get; set; }
 
+        public Guid Device { get; set; }
+
         [DataMember]
         public string Manufacturer { get; set; }
 

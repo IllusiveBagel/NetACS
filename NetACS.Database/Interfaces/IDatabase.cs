@@ -13,10 +13,10 @@ namespace NetACS.Database.Interfaces
         public List<T> Select<T>(T model, int count);
 
         // Insert Methods
-        public bool Insert<T>(List<T> model);
+        public int Insert<T>(List<T> model);
 
         // Update Methods
-        public bool Update<T>(List<T> model);
+        public int Update<T>(List<T> model);
 
         // Universal Methods
         public void Initialize(string connectionString);

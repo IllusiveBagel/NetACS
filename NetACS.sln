@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetACS.API", "NetACS.API\Ne
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{C122D873-39DA-4611-AF02-664976E29C0A}"
 	ProjectSection(SolutionItems) = preProject
-		Docs\ExamplePacket.txt = Docs\ExamplePacket.txt
+		Docs\ExamplePacket.xml = Docs\ExamplePacket.xml
 		SoapUIExampleBody.xml = SoapUIExampleBody.xml
 		Docs\TestPostmanCall.txt = Docs\TestPostmanCall.txt
 	EndProjectSection
@@ -20,6 +20,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetACS.Models", "NetACS.Mod
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQL", "SQL", "{55333F81-BBBB-46B7-BABA-B7813EE71F49}"
 	ProjectSection(SolutionItems) = preProject
+		Device.sql = Device.sql
 		DeviceId.sql = DeviceId.sql
 	EndProjectSection
 EndProject

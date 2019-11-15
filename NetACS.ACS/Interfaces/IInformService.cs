@@ -12,6 +12,9 @@ namespace NetACS.ACS.Interfaces
         Inform Inform(DeviceId DeviceId, EventStruct[] Event, ParameterValueStruct[] ParameterList);
 
         [OperationContract]
-        List<DeviceId> getTest();
+        List<DeviceId> selectTest();
+
+        [OperationContract]
+        int insertTest(List<Device> device);
     }
 }

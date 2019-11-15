@@ -6,6 +6,7 @@ using NetACS.Database.Interfaces;
 
 using Dapper;
 using System.Data.SqlClient;
+using System.Linq;
 
 namespace NetACS.Database.Services
 {
@@ -44,24 +45,81 @@ namespace NetACS.Database.Services
         }
 
         // Insert Methods
-        public bool Insert<T>(List<T> model)
+        public int Insert<T>(List<T> model)
         {
-            var count = Execute($"INSERT INTO {typeof(T).Name} () VALUES ()");
+            List<string> properties = typeof(T).GetProperties().Select(property => property.Name).ToList();
+            List<string> values = new List<string>();
 
-            if (count == model.Count)
+            for (int i = 0; i < model.Count; i++)
             {
-                return true;
+                List<string> row = new List<string>();
+                foreach (string property in properties)
+                {
+                    row.Add($"'{typeof(T).GetProperty(property).GetValue(model[i]).ToString()}'");
+                }
+
+                values.Add(string.Join(",", row));
             }
-            else
+
+            string data = "";
+
+            var last = values.Last();
+            foreach (string value in values)
             {
-                throw new Exception("Error: Insert Failed");
+                if (value.Equals(last))
+                {
+                    data += $"({ value})";
+                }
+                else
+                {
+                    data += $"({value}),";
+                }
             }
+
+            return Execute(
+                $"INSERT INTO {typeof(T).Name} " +
+                $"({string.Join(",", properties)}) " +
+                $"VALUES {data}"
+            );
         }
 
         // Update Methods
-        public bool Update<T>(List<T> model)
+        public int Update<T>(List<T> model)
         {
-            throw new NotImplementedException();
+            List<string> properties = typeof(T).GetProperties().Select(property => property.Name).ToList();
+            List<string> values = new List<string>();
+
+            for (int i = 0; i < model.Count; i++)
+            {
+                List<string> row = new List<string>();
+                foreach (string property in properties)
+                {
+                    row.Add($"'{typeof(T).GetProperty(property).GetValue(model[i]).ToString()}'");
+                }
+
+                values.Add(string.Join(",", row));
+            }
+
+            string data = "";
+
+            var last = values.Last();
+            foreach (string value in values)
+            {
+                if (value.Equals(last))
+                {
+                    data += $"({ value})";
+                }
+                else
+                {
+                    data += $"({value}),";
+                }
+            }
+
+            return Execute(
+                $"UPDATE {typeof(T).Name} " +
+                $"SET {string.Join(",", properties)}" +
+                $"WHERE ID=''"
+            );
         }
 
         // Universal Methods
@@ -78,9 +136,7 @@ namespace NetACS.Database.Services
                 }
             }
             else
-            {
                 throw new Exception("Error: Database Connection Not Initialized");
-            }
         }
 
         public int Execute(string sql)
@@ -96,9 +152,7 @@ namespace NetACS.Database.Services
                 }
             }
             else
-            {
                 throw new Exception("Error: Database Connection Not Initialized");
-            }
         }
 
     }

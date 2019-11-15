@@ -1,7 +1,7 @@
 ﻿USE [NetACS]
 GO
 
-/****** Object:  Table [dbo].[DeviceId]    Script Date: 14/11/2019 15:00:00 ******/
+/****** Object:  Table [dbo].[DeviceId]    Script Date: 15/11/2019 09:26:13 ******/
 SET ANSI_NULLS ON
 GO
 
@@ -10,6 +10,7 @@ GO
 
 CREATE TABLE [dbo].[DeviceId](
 	[ID] [uniqueidentifier] ROWGUIDCOL  NOT NULL,
+	[Device] [uniqueidentifier] NOT NULL,
 	[Manufacturer] [text] NULL,
 	[OUI] [varchar](6) NULL,
 	[ProductClass] [text] NULL,
@@ -22,4 +23,11 @@ CREATE TABLE [dbo].[DeviceId](
 GO
 
 ALTER TABLE [dbo].[DeviceId] ADD  CONSTRAINT [DF_DeviceId_ID]  DEFAULT (newid()) FOR [ID]
+GO
+
+ALTER TABLE [dbo].[DeviceId]  WITH CHECK ADD  CONSTRAINT [FK_DeviceId_Device] FOREIGN KEY([Device])
+REFERENCES [dbo].[Device] ([ID])
+GO
+
+ALTER TABLE [dbo].[DeviceId] CHECK CONSTRAINT [FK_DeviceId_Device]
 GO
