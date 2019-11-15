@@ -3,15 +3,15 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 
-using NetACS.ACS.Services;
-using NetACS.ACS.Interfaces;
+using NetACS.CWMP.Services;
+using NetACS.CWMP.Interfaces;
 using NetACS.Database.Services;
 using NetACS.Database.Interfaces;
 
 using SoapCore;
 using Microsoft.Extensions.Configuration;
 
-namespace NetACS.ACS
+namespace NetACS.CWMP
 {
     public class Startup
     {

@@ -3,7 +3,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace NetACS.ACS
+namespace NetACS.CWMP
 {
     public class Program
     {

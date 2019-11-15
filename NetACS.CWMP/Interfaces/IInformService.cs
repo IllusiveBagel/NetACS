@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 using NetACS.Models;
 
-namespace NetACS.ACS.Interfaces
+namespace NetACS.CWMP.Interfaces
 {
     [ServiceContract(Namespace = "urn:dslforum-org:cwmp-1-0")]
     public interface IInformService

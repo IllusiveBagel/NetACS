@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.0</TargetFramework>
     <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+    <Copyright>Neutral Systems</Copyright>
   </PropertyGroup>
 
   <ItemGroup>

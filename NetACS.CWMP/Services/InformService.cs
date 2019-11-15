@@ -1,13 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 
 using NetACS.Models;
-using NetACS.ACS.Interfaces;
+using NetACS.CWMP.Interfaces;
 using NetACS.Database.Interfaces;
 
 using Microsoft.Extensions.Configuration;
 
-namespace NetACS.ACS.Services
+namespace NetACS.CWMP.Services
 {
     public class InformService : IInformService
     {
